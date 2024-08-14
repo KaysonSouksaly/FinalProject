@@ -95,11 +95,12 @@ nav ul li:hover.dark-mode {
 }
 
 /* Social Media Icons */
-nav a i {
+nav div a {
     color: #f8f8f8;
     font-size: 2em;
     margin: 0 1vh;
     transition: all 0.25s linear;
+    text-decoration: none;
 }
 
 /* Hamburger Icon */
