@@ -197,8 +197,8 @@ function darkMode() {
 }
 
 // Run carousel function only after the DOM has fully loaded
-document.addEventListener('DOMContentLoaded', carousel
-    
+document.addEventListener('DOMContentLoaded', carousel);
+
 // Function to initialize touch gestures
 // This function adds swipe gesture support for navigating through items (e.g., in a carousel).
 
