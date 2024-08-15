@@ -79,6 +79,12 @@ function carousel() {
     const prevBtn = document.getElementById('back-btn');
     const nextBtn = document.getElementById('next-btn');
     
+    // Ensure the buttons and items exist before proceeding
+    if (!prevBtn || !nextBtn || items.length === 0 || radios.length === 0) {
+        console.error("Carousel elements not found.");
+        return;
+    }
+    
     // Set the initial viewing item to the first in the list
     let currentIndex = 0;
     
@@ -141,12 +147,6 @@ function carousel() {
         });
     });
 
-    // Ensure the buttons and items exist before proceeding
-    if (!prevBtn || !nextBtn || items.length === 0 || radios.length === 0) {
-        console.error("Carousel elements not found.");
-        return;
-    }
-
     // Initially display the first item in the carousel
     showItem(currentIndex);
 
@@ -164,6 +164,9 @@ function carousel() {
     // Start auto-scrolling when the carousel is initialized
     startAutoScroll();
 }
+
+// Run carousel function only after the DOM has fully loaded
+document.addEventListener('DOMContentLoaded', carousel);
 
 // Function to initialize dark mode toggle
 // This function enables a dark mode feature that allows users to switch between light and dark themes.
@@ -195,9 +198,6 @@ function darkMode() {
         });
     }
 }
-
-// Run carousel function only after the DOM has fully loaded
-document.addEventListener('DOMContentLoaded', carousel);
 
 // Function to initialize touch gestures
 // This function adds swipe gesture support for navigating through items (e.g., in a carousel).
