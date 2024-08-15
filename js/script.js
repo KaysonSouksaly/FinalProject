@@ -141,6 +141,12 @@ function carousel() {
         });
     });
 
+    // Ensure the buttons and items exist before proceeding
+    if (!prevBtn || !nextBtn || items.length === 0 || radios.length === 0) {
+        console.error("Carousel elements not found.");
+        return;
+    }
+
     // Initially display the first item in the carousel
     showItem(currentIndex);
 
@@ -190,6 +196,9 @@ function darkMode() {
     }
 }
 
+// Run carousel function only after the DOM has fully loaded
+document.addEventListener('DOMContentLoaded', carousel
+    
 // Function to initialize touch gestures
 // This function adds swipe gesture support for navigating through items (e.g., in a carousel).
 
