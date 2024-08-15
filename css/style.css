@@ -222,7 +222,9 @@ h1, h2 {
 }
 
 .project-link {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 10px;
     color: #f8f8f8;
     text-decoration: none;
